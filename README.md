@@ -3,7 +3,7 @@
 
 Xelatex直接编译example.tex运行
 
-![image](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/beamer-hfut-sxxy.png)
+![image](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/Beamer-HFUT-sxxy.png)
 
 # 联系方式
 联系人：殷振豪
@@ -14,5 +14,6 @@ Xelatex直接编译example.tex运行
 
 # Version
 
-v1.0 2019/10/22
+### V1.0 2019/10/22
+
 更改为数学学院的logo
