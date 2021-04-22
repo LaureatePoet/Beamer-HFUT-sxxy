@@ -7,7 +7,7 @@ Xelatex直接编译example.tex运行
 
 # Version
 ### v1.0.1 2021/04/22
-添加了PPT模板，见[PowerPoint_Template][https://github.com/LaureatePoet/Beamer-HFUT-sxxy/tree/master/PowerPoint_Template]
+添加了PPT模板，见[PowerPoint_Template](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/tree/master/PowerPoint_Template)
 
 ![HFUT-presentation](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/PPT-HFUT.png)
 ![HFUT-sxxy-presentation](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/PPT-HFUT-sxxy.png)
