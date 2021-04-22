@@ -5,14 +5,12 @@ Xelatex直接编译example.tex运行
 
 ![image](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/Beamer-HFUT-sxxy.png)
 
-# 联系方式
-联系人：殷振豪
-
-联系邮箱：[y_zh@mail.hfut.edu.cn](mailto:y_zh@mail.hfut.edu.cn)
-
-个人主页：http://www.poetyin.com/2018/11/19/About-the-author/
-
 # Version
+### v1.0.1 2021/04/22
+添加了PPT模板，见[PowerPoint_Template][https://github.com/LaureatePoet/Beamer-HFUT-sxxy/tree/master/PowerPoint_Template]
+
+![HFUT-presentation](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/PPT-HFUT.png)
+![HFUT-sxxy-presentation](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/images/PPT-HFUT-sxxy.png)
 
 ### V1.0 2019/10/22
 
