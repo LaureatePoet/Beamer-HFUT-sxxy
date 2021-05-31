@@ -1,35 +1,51 @@
 \mode<presentation>
 
 \RequirePackage{lastpage,graphicx,tikz,setspace}
-
 \usefonttheme{professionalfonts}
 \usefonttheme{structuresmallcapsserif}
 \usefonttheme{serif}
-\setbeamertemplate{navigation symbols}{}
-
+\setbeamertemplate{navigation symbols}[default]
+\setbeamertemplate{caption}[numbered]
 \definecolor{blue}{RGB}{31,91,166}
 \usecolortheme[RGB={31,91,166}]{structure}
+\definecolor{hfutred}{cmyk}{0.3,1,0.95,0.05}
 
 % Titlepage
 \setbeamertemplate{title page}{
-  \includegraphics[height=0.17\textheight]{logo-titlepage-sxxy.png}
+  \noindent\includegraphics[height=0.17\textheight]{figures/logo-titlepage-sxxy.png}
   \vskip4em
   \begin{spacing}{1}
-    {\usebeamerfont{title}\usebeamercolor[fg]{title}\textbf\inserttitle}
+    \noindent
+    \centering{\usebeamerfont{title}\usebeamercolor[fg]{title}\textbf\inserttitle}
     \tikz \draw[ultra thick,line cap=round,color=blue!80] (0,0) -- (\textwidth-1.6pt,0);
   \end{spacing}
-  \vskip3em
-  {\usebeamercolor[fg]{title}\insertauthor}
-  \vskip0.2em
-  \insertinstitute
-  \vskip0.2em
-  \insertdate
+  {\noindent\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}\textbf\insertsubtitle}
+  \vskip2.5em
+  {\noindent\usebeamercolor[fg]{title}\insertauthor}\par
+  \noindent\insertinstitute\par
+  \noindent\insertdate
+}
+
+% frame title
+\RequirePackage[absolute,overlay]{textpos}
+\defbeamertemplate*{frametitle}{}[1][]
+{
+  \vspace{20pt}
+  %\hspace{}
+  {
+    \begin{spacing}{1}
+      {\color{blue} \fontsize{20}{30} \selectfont \noindent \insertframetitle}
+    \end{spacing}
+    \begin{spacing}{1}
+      {\color{blue} \fontsize{16}{30} \selectfont \noindent \insertframesubtitle}
+    \end{spacing}
+  }
 }
 
 \setbeamertemplate{background}{
   \begin{tikzpicture}
     \path (0,0) -- (\paperwidth,\paperheight);
-    \node [opacity=0.025] at (0.8\paperwidth,0.25\paperheight) {\includegraphics[width=11cm]{logo-background-sxxy.png}};
+    \node [opacity=0.025] at (0.8\paperwidth,0.25\paperheight) {\includegraphics[width=11cm]{figures/logo-background-sxxy.png}};
   \end{tikzpicture}
 }
 %% Set page margins
@@ -52,18 +68,18 @@
 	\end{beamercolorbox}
 } %\setbeamertemplate{headline}{ \insertnavigation{0.94\paperwidth}} %This includes subsection
 \addtoheadtemplate{\pgfuseshading{beamer@headfade}\vskip-1cm}{}
-
+%\addfootbox{}{}
 \setbeamertemplate{footline}{
-  \begin{beamercolorbox}[ht=3em,dp=1em,left]{}
+  \begin{beamercolorbox}[ht=1em,dp=1em,center]{}
     \hspace{1em}
-    \thepage\hspace{0.2em}/\hspace{0.2em}\pageref{LastPage}
+    \insertframenumber\hspace{0.2em}/\hspace{0.2em}\inserttotalframenumber
     \ifnum\thepage>1
-      \hspace{1em}
+      \hfill
       {\usebeamercolor[fg]{title}\insertshorttitle}
-      \hspace{1em}
+      \hfill
       \insertshortauthor
     \fi
   \end{beamercolorbox}
 }
-
+% \setbeamersize{sidebar width right=2cm}
 \mode<all>

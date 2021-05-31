@@ -1,19 +1,26 @@
-%!TEX program = xelatex
-% 完整编译: xelatex -> bibtex -> xelatex -> xelatex
-\documentclass{beamer}
-\usetheme{hfut}
-\usepackage{xeCJK}
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
 
+\documentclass[aspectratio=169]{beamer}
+\usetheme{hfut}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{blindtext}
+\usepackage{datetime}
+\usepackage[no-math]{fontspec}
+\usepackage{xunicode}
+\usepackage{xltxtra}
 \usepackage{multirow}
 \usepackage{booktabs}
-\usepackage{layout} 
-
-\setCJKmainfont{SimSun}
-
+\usepackage{layout}
+\usepackage{mathspec}
+\usepackage{ctex}
+% 配置图片的默认目录
+\graphicspath{{figures/}}
+\linespread{1.2}% 修改行距
 \title{合肥工业大学数学学院Beamer模板}
-\author{作者  （Author）}
+\author[LaureatePoet]{作者  （Author）}
 \institute{School of Mathematics, HFUT}
-\date{October 2019}
+\date{June 2021}
 
 \begin{document}
   
@@ -21,23 +28,9 @@
     \maketitle
   \end{frame}
 
-\section{介绍}
-
-\begin{frame}{动机}
-参考了fudan和sgp940的工作，可以显示中文和英文
-请各位自由使用。
-\end{frame}
-
-
-\begin{frame}
-\frametitle{目录}
-\begin{itemize}
-\item 1. 第一项
-\item 2. 第二项
-\item 3. 第三项
-\item 4. 第四项
-\item 5. 第五项
-\end{itemize}
+\section*{目录}
+\begin{frame}{目录}
+	\tableofcontents
 \end{frame}
 
 
@@ -45,7 +38,7 @@
 \begin{frame}
 \frametitle{Bullet Points}
 \vspace{-0.3cm}
-\begin{itemize}
+\begin{itemize}[<+->]
 	\item Most engineers are lazy ... and that is often a good thing
 	\begin{itemize}
 		\item (\textit{lazy} $=$ \textit{to do things in the most efficient way})
@@ -75,7 +68,7 @@
 \begin{columns}
 \begin{column}{4cm}
 	\begin{figure}
-		\includegraphics[height=3cm]{logo-background.jpg}
+		\includegraphics[height=3cm]{logo-background-sxxy.png}
 	\end{figure}
 	\begin{center}
 		\tiny
@@ -85,6 +78,7 @@
 	\end{center}
 \end{column}
 \begin{column}{6cm}
+	\hspace{-1.0cm}
 	\begin{itemize}
 		\item \TeX{} was created by Donald Knuth in 1978
 		\item A typesetting macro language and compiler:
@@ -110,8 +104,8 @@
 \vspace{-0.3cm}
 \begin{figure}[h]
 \centering
-\includegraphics[width=0.3\textwidth]{logo-background.jpg}
-\caption{合肥工业大学的Logo}
+\includegraphics[width=0.3\textwidth]{logo-background-sxxy.png}
+\caption{合肥工业大学数学学院}
 \end{figure}
 \end{frame}
 
@@ -159,16 +153,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lectus nisl, ul
 \frametitle{Table and Equation}
 \vspace{-0.3cm}
 \begin{table}
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
+	\caption{Table caption}
+	\begin{tabular}{l l l}
+		\toprule
+		\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
+		\midrule
+		Treatment 1 & 0.0003262 & 0.562 \\
+		Treatment 2 & 0.0015681 & 0.910 \\
+		Treatment 3 & 0.0009271 & 0.296 \\
+		\bottomrule
+	\end{tabular}
 \end{table}
 
 \begin{equation} % use equation* to remove equation number
@@ -204,7 +198,9 @@ a_{1n} & \cdots & a_{nn}
 \end{frame}
 
 \begin{frame}
-谢谢各位！
+	\centering
+	\Huge{\bfseries\itshape\textcolor{blue}{Thanks!}}\par
+	\Large\itshape 恳请各位老师批评指正！
 \end{frame}
 
 
