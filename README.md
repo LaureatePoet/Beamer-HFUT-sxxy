@@ -7,7 +7,7 @@
 
 Xelatex直接编译example.tex运行
 
-![Beamer-HFUT-sxxy](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/figures/Beamer-HFUT-sxxy.png)
+![Beamer-HFUT-sxxy](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/figures/Beamer-HFUT-sxxy.jpg)
 
 # Version
 ### v1.0.1 2021/06/04
