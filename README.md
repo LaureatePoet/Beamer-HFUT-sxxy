@@ -19,6 +19,6 @@ Xelatex直接编译example.tex运行
 ![PPT-HFUT](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/figures/PPT-HFUT.png)
 ![PPT-HFUT-sxxy](https://github.com/LaureatePoet/Beamer-HFUT-sxxy/blob/master/figures/PPT-HFUT-sxxy.png)
 
-### V1.0 2019/10/22
+### V1.0.0 2019/10/22
 
 更改为数学学院的logo

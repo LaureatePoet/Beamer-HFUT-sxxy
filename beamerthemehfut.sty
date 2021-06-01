@@ -70,16 +70,26 @@
 \addtoheadtemplate{\pgfuseshading{beamer@headfade}\vskip-1cm}{}
 %\addfootbox{}{}
 \setbeamertemplate{footline}{
-  \begin{beamercolorbox}[ht=1em,dp=1em,center]{}
-    \hspace{1em}
-    \insertframenumber\hspace{0.2em}/\hspace{0.2em}\inserttotalframenumber
-    \ifnum\thepage>1
-      \hfill
-      {\usebeamercolor[fg]{title}\insertshorttitle}
-      \hfill
-      \insertshortauthor
-    \fi
-  \end{beamercolorbox}
+  \leavevmode%
+  \ifnum\thepage>1
+    \hbox{%
+    \begin{beamercolorbox}[wd=.2\paperwidth, ht=1em,dp=1em,center]{}
+        \insertshortauthor
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.6\paperwidth, ht=1em,dp=1em,center]{}
+        {\usebeamercolor[fg]{title}\insertshorttitle}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[wd=.2\paperwidth, ht=1em,dp=1em,right]{}
+      \insertdate\hspace{1em}\insertframenumber\hspace{0.2em}/\hspace{0.2em}\inserttotalframenumber\hspace{2em}
+    \end{beamercolorbox}
+    }
+  \else
+    \hbox{%
+    \begin{beamercolorbox}[ht=1em,dp=1em,right]{}
+      \noindent\insertdate\hspace{1em}\insertframenumber\hspace{0.2em}/\hspace{0.2em}\inserttotalframenumber\hspace{2em}
+    \end{beamercolorbox}
+    }
+  \fi
 }
 % \setbeamersize{sidebar width right=2cm}
 \mode<all>
